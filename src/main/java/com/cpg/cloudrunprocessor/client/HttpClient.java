@@ -25,7 +25,7 @@ public class HttpClient {
         HttpHeaders headers = createHeaders();
         HttpEntity<ProductEntity> requestEntity = new HttpEntity<>(entity, headers);
         logger.info(LOG_MESSAGE,requestEntity);
-        //template.postForEntity(URL, requestEntity, String.class);
+        template.postForEntity(URL, requestEntity, String.class);
     }
 
     private static HttpHeaders createHeaders() {
