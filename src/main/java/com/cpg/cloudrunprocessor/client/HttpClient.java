@@ -19,13 +19,13 @@ public class HttpClient {
     private static final Logger logger = LoggerFactory.getLogger(HttpClient.class);
 
     @Autowired
-    private static RestTemplate template;
+    private RestTemplate template;
 
     public void sendRequest(ProductEntity entity) {
         HttpHeaders headers = createHeaders();
         HttpEntity<ProductEntity> requestEntity = new HttpEntity<>(entity, headers);
         logger.info(LOG_MESSAGE,requestEntity);
-        template.postForEntity(URL, requestEntity, String.class);
+        //template.postForEntity(URL, requestEntity, String.class);
     }
 
     private static HttpHeaders createHeaders() {

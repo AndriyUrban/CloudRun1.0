@@ -1,5 +1,6 @@
 package com.cpg.cloudrunprocessor.web;
 
+import com.cpg.cloudrunprocessor.dto.IncomingDTO;
 import com.cpg.cloudrunprocessor.dto.ProductEntity;
 import com.cpg.cloudrunprocessor.service.ServiceRepo;
 import com.cpg.cloudrunprocessor.service.ValidatorService;
@@ -28,7 +29,7 @@ public class WebController {
 
     @PostMapping("/buy")
     @ResponseBody
-    public ResponseEntity<HttpStatus> createProduct(String incomingString) {
+    public ResponseEntity<HttpStatus> createProduct(@RequestBody String incomingString) {
         logger.info(ENDPOINT_WAS_SUCCESSFULLY_REACHED);
         validator.validateIncomingMessage(incomingString);
         service.buyProduct(incomingString);
