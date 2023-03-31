@@ -1,7 +1,5 @@
 package com.cpg.cloudrunprocessor.web;
 
-import com.cpg.cloudrunprocessor.dto.IncomingDTO;
-import com.cpg.cloudrunprocessor.dto.ProductEntity;
 import com.cpg.cloudrunprocessor.service.ServiceRepo;
 import com.cpg.cloudrunprocessor.service.ValidatorService;
 import org.slf4j.Logger;
